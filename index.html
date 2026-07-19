@@ -37,7 +37,7 @@
     </nav>
 
     <div class="header-actions">
-      <a href="#waitlist" class="btn btn-primary">Join the Waitlist</a>
+      <button type="button" class="btn btn-primary js-open-waitlist">Join the Waitlist</button>
       <div class="lang-switch">EN <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
         <span></span><span></span><span></span>
@@ -57,7 +57,7 @@
     <div class="container hero-content">
       <h1>International game development experiences across Peru.</h1>
       <p>Travel. Create. Connect. Join game developers from around the world and local communities to build games, share ideas and live unforgettable experiences.</p>
-      <a href="#waitlist" class="btn btn-primary">Join the Waitlist <span class="arrow">→</span></a>
+      <button type="button" class="btn btn-primary js-open-waitlist">Join the Waitlist <span class="arrow">→</span></button>
     </div>
   </section>
 
@@ -177,10 +177,7 @@
         <h2>Be part of the journey.</h2>
         <p>Join our waitlist and get early updates, behind the scenes and exclusive content.</p>
       </div>
-      <form class="cta-form" id="waitlist-form">
-        <input type="email" name="email" placeholder="Your email" required aria-label="Email address">
-        <button type="submit" class="btn btn-dark">Join the Waitlist</button>
-      </form>
+      <button type="button" class="btn btn-dark js-open-waitlist">Join the Waitlist</button>
     </div>
   </section>
 
@@ -238,6 +235,9 @@
     <p>© 2026 Peru Game Jam. All rights reserved.</p>
   </div>
 </footer>
+
+<div id="fillout-waitlist-trigger" class="fillout-trigger-hidden" data-zite-id="2kdswmjrkg" data-zite-embed-type="popup" data-zite-button-text="Join the Waitlist" data-zite-inherit-parameters data-zite-popup-size="medium"></div>
+<script src="https://server.fillout.com/embed/v2-zite/"></script>
 
 <script src="js/main.js"></script>
 </body>

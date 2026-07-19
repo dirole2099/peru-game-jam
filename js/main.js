@@ -9,12 +9,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  const form = document.getElementById('waitlist-form');
-  if (form) {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const email = form.querySelector('input[type="email"]').value;
-      form.innerHTML = `<p style="color:#fff;font-weight:600;">Thanks! We'll be in touch at ${email}.</p>`;
+  const openButtons = document.querySelectorAll('.js-open-waitlist');
+  const trigger = document.getElementById('fillout-waitlist-trigger');
+
+  openButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      if (!trigger) return;
+      const filloutButton = trigger.querySelector('button, a, [role="button"]');
+      (filloutButton || trigger).click();
     });
-  }
+  });
 });
