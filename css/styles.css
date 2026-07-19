@@ -9,7 +9,7 @@
   --muted: #6b6f7a;
   --purple: #6b4fd6;
   --orange: #e0762a;
-  --teal: #1f9e7a;
+  --green: #2e8f5c;
   --radius: 10px;
   --container: 1180px;
   --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -121,7 +121,7 @@ a { color: inherit; text-decoration: none; }
   gap: 24px;
 }
 
-.logo-img { height: 38px; width: auto; }
+.logo-img { height: 44px; width: auto; }
 
 .main-nav {
   display: flex;
@@ -303,7 +303,17 @@ a { color: inherit; text-decoration: none; }
 .badge-red { background: var(--red); }
 .badge-purple { background: var(--purple); }
 .badge-orange { background: var(--orange); }
-.badge-teal { background: var(--teal); }
+.badge-green { background: var(--green); }
+
+.edition-image img.edition-watermark {
+  position: absolute;
+  bottom: 14px; right: 14px;
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  opacity: 0.9;
+  transition: none;
+}
 
 /* ---------- Why Join ---------- */
 .why-join {
@@ -393,7 +403,7 @@ a { color: inherit; text-decoration: none; }
   padding-bottom: 50px;
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
-.footer-brand p { color: #8b8ea0; margin-top: 12px; font-size: 0.85rem; letter-spacing: 0.03em; text-transform: uppercase; }
+.footer-logo-img { height: 110px; }
 
 .footer-col { display: flex; flex-direction: column; gap: 12px; }
 .footer-col h4 {
