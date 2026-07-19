@@ -1,0 +1,13 @@
+<svg width="180" height="44" viewBox="0 0 180 44" xmlns="http://www.w3.org/2000/svg">
+  <path d="M12 2 L22 2 L22 14 L16 24 L10 14 Z" fill="#e42328"/>
+  <circle cx="12.5" cy="8" r="1.1" fill="#12141c"/>
+  <circle cx="16" cy="6" r="1.1" fill="#12141c"/>
+  <circle cx="19.5" cy="8" r="1.1" fill="#12141c"/>
+  <circle cx="12.5" cy="12" r="1.1" fill="#12141c"/>
+  <circle cx="16" cy="10" r="1.1" fill="#12141c"/>
+  <circle cx="19.5" cy="12" r="1.1" fill="#12141c"/>
+  <circle cx="14" cy="16" r="1.1" fill="#12141c"/>
+  <circle cx="18" cy="16" r="1.1" fill="#12141c"/>
+  <text x="34" y="18" font-family="Arial, sans-serif" font-weight="800" font-size="14" fill="#e42328" letter-spacing="0.5">PERU GAME</text>
+  <text x="34" y="34" font-family="Arial, sans-serif" font-weight="800" font-size="14" fill="#ffffff" letter-spacing="0.5">JAM</text>
+</svg>
