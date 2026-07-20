@@ -112,7 +112,7 @@ const translations = {
   es: {
     nav: {
       editions: 'Ediciones',
-      about: 'Nosotros',
+      about: 'Acerca de PGJ',
       experience: 'Experiencia',
       faq: 'Preguntas',
       contact: 'Contacto',
@@ -122,7 +122,7 @@ const translations = {
       iquitosEdition: 'Edición Iquitos'
     },
     cta: {
-      waitlist: 'Unirme a la Lista'
+      waitlist: 'Lista de espera'
     },
     hero: {
       title: 'Crea juegos. Descubre Perú.',
@@ -133,7 +133,7 @@ const translations = {
       lima: {
         name: 'Lima',
         editionWord: 'Edición',
-        desc: 'Una edición costera y urbana centrada en la gastronomía, la cultura contemporánea y la comunidad de desarrollo de videojuegos más grande del Perú. El punto de entrada ideal al viaje.'
+        desc: 'Una edición costera y urbana centrada en la gastronomía, la cultura contemporánea y la comunidad de desarrollo de videojuegos más grande del Perú.'
       },
       cusco: {
         name: 'Cusco',
@@ -159,13 +159,13 @@ const translations = {
         { title: 'Viaje y Cultura', desc: 'Vive el Perú a través de su gente, comida, lugares y tradiciones en cada edición.' },
         { title: 'Crea y Comparte', desc: 'Desarrolla videojuegos en entornos únicos y presenta tus proyectos.' },
         { title: 'Trabaja y Conecta', desc: 'Espacios inspiradores, buen café y el ambiente ideal para crear.' },
-        { title: 'Recuerdos para Siempre', desc: 'Amistades, ideas y experiencias que te acompañarán para siempre.' }
+        { title: 'Recuerdos Inolvidables', desc: 'Amistades, ideas y experiencias que te acompañarán para siempre.' }
       ]
     },
     vision: {
       eyebrow: 'Nuestra visión',
       heading: 'Construyendo juntos un mapa creativo del Perú.',
-      text: 'Peru Game Jam es una plataforma que conecta personas, comunidades y ciudades a través del poder de los videojuegos y la creatividad.',
+      text: 'Peru Game Jam es una plataforma que conecta personas, comunidades y ciudades a través del poder de los juegos y la creatividad.',
       cta: 'Conocer más'
     },
     ctaBand: {

@@ -291,13 +291,17 @@ a { color: inherit; text-decoration: none; }
 .edition-card:focus-visible { outline: 2px solid var(--red); outline-offset: 4px; border-radius: var(--radius); }
 
 .edition-card h3 {
+  display: flex;
+  flex-direction: column;
   font-size: 1.15rem;
   margin-top: 16px;
   text-transform: uppercase;
   letter-spacing: 0.02em;
 }
-.edition-card h3 .edition-word { font-weight: 500; display: block; font-size: 0.95rem; }
+.edition-card h3 .edition-word { font-weight: 500; font-size: 0.95rem; }
 .edition-card p { margin-top: 6px; font-size: 0.92rem; }
+
+html[lang="es"] .edition-card h3 { flex-direction: column-reverse; }
 
 .edition-image {
   position: relative;
