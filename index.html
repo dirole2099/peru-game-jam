@@ -14,31 +14,35 @@
 
 <header class="site-header">
   <div class="container header-inner">
-    <a href="#" class="logo">
+    <a href="#home" class="logo">
       <img src="assets/images/logo-full-transparent-white.png" alt="Peru Game Jam" class="logo-img">
     </a>
 
     <nav class="main-nav" id="main-nav">
-      <a href="#home" class="active">Home</a>
-      <a href="#about">About</a>
       <div class="dropdown">
-        <a href="#editions">Editions <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="#editions"><span data-i18n="nav.editions">Editions</span> <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         <div class="dropdown-menu">
-          <a href="#lima">Lima Edition</a>
-          <a href="#cusco">Cusco Edition</a>
-          <a href="#arequipa">Arequipa Edition</a>
-          <a href="#iquitos">Iquitos Edition</a>
+          <a href="#lima" data-i18n="nav.limaEdition">Lima Edition</a>
+          <a href="#cusco" data-i18n="nav.cuscoEdition">Cusco Edition</a>
+          <a href="#arequipa" data-i18n="nav.arequipaEdition">Arequipa Edition</a>
+          <a href="#iquitos" data-i18n="nav.iquitosEdition">Iquitos Edition</a>
         </div>
       </div>
-      <a href="#experience">Experience</a>
-      <a href="#faq">FAQ</a>
-      <a href="#blog">Blog</a>
-      <a href="#contact">Contact</a>
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#experience" data-i18n="nav.experience">Experience</a>
+      <button type="button" class="nav-link-btn js-open-modal" data-modal-kind="howitworks" data-i18n="nav.faq">FAQ</button>
+      <span class="nav-disabled" data-i18n="nav.contact">Contact</span>
     </nav>
 
     <div class="header-actions">
-      <button type="button" class="btn btn-primary js-open-waitlist">Join the Waitlist</button>
-      <div class="lang-switch">EN <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <button type="button" class="btn btn-primary js-open-waitlist" data-i18n="cta.waitlist">Join the Waitlist</button>
+      <div class="dropdown lang-dropdown" id="lang-dropdown">
+        <button type="button" class="lang-switch" id="lang-switch"><span id="lang-label">EN</span> <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="dropdown-menu lang-menu">
+          <button type="button" class="lang-option" data-lang="en">English</button>
+          <button type="button" class="lang-option" data-lang="es">Español</button>
+        </div>
+      </div>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
         <span></span><span></span><span></span>
       </button>
@@ -55,103 +59,97 @@
       <div class="hero-overlay"></div>
     </div>
     <div class="container hero-content">
-      <h1>International game development experiences across Peru.</h1>
-      <p>Travel. Create. Connect. Join game developers from around the world and local communities to build games, share ideas and live unforgettable experiences.</p>
-      <button type="button" class="btn btn-primary js-open-waitlist">Join the Waitlist <span class="arrow">→</span></button>
+      <h1 data-i18n="hero.title">Create games. Discover Peru.</h1>
+      <p data-i18n="hero.subtitle">A seven-day international creative retreat combining travel, local culture and collaborative game development in Peru.</p>
+      <button type="button" class="btn btn-primary js-open-waitlist"><span data-i18n="cta.waitlist">Join the Waitlist</span> <span class="arrow">→</span></button>
     </div>
   </section>
 
   <!-- EDITIONS -->
   <section class="editions" id="editions">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">2027 Editions</p>
-          <h2>Four cities. Four experiences.<br>One journey.</h2>
-        </div>
-        <a href="#editions" class="link-arrow">View all editions <span class="arrow">→</span></a>
-      </div>
+      <h2 class="editions-heading" data-i18n-html="editions.heading">Four cities. Four experiences.<br>One journey.</h2>
 
       <div class="edition-grid">
-        <article class="edition-card" id="lima">
+        <article class="edition-card" id="lima" tabindex="0" role="button" data-modal-kind="lima" aria-label="Lima Edition">
           <div class="edition-image">
             <img src="assets/images/hero-lima.jpg" alt="Peru Game Jam — Lima Edition, May 2027">
           </div>
-          <h3>Lima <span>Edition</span></h3>
-          <p>Urban, coastal and vibrant. The perfect start.</p>
+          <h3><span data-i18n="editions.lima.name">Lima</span> <span class="edition-word" data-i18n="editions.lima.editionWord">Edition</span></h3>
+          <p data-i18n="editions.lima.desc">A coastal, urban edition built around food, contemporary culture and Peru's largest game development community. The ideal entry point into the journey.</p>
         </article>
 
-        <article class="edition-card" id="cusco">
+        <article class="edition-card" id="cusco" tabindex="0" role="button" data-modal-kind="comingSoon" data-city="cusco" aria-label="Cusco Edition">
           <div class="edition-image">
             <img src="assets/images/hero-cusco.jpg" alt="Peru Game Jam — Cusco Edition, coming soon">
           </div>
-          <h3>Cusco <span>Edition</span></h3>
-          <p>History, culture and inspiration in the Andes.</p>
+          <h3><span data-i18n="editions.cusco.name">Cusco</span> <span class="edition-word" data-i18n="editions.cusco.editionWord">Edition</span></h3>
+          <p data-i18n="editions.cusco.desc">A high-altitude creative retreat shaped by Andean history, living traditions and one of the world's most extraordinary cultural landscapes.</p>
         </article>
 
-        <article class="edition-card" id="arequipa">
+        <article class="edition-card" id="arequipa" tabindex="0" role="button" data-modal-kind="comingSoon" data-city="arequipa" aria-label="Arequipa Edition">
           <div class="edition-image">
             <img src="assets/images/hero-arequipa.jpg" alt="Peru Game Jam — Arequipa Edition, coming soon">
           </div>
-          <h3>Arequipa <span>Edition</span></h3>
-          <p>Architecture, volcanoes and creative calm.</p>
+          <h3><span data-i18n="editions.arequipa.name">Arequipa</span> <span class="edition-word" data-i18n="editions.arequipa.editionWord">Edition</span></h3>
+          <p data-i18n="editions.arequipa.desc">Surrounded by volcanoes and built from white volcanic stone, Arequipa offers space to think, create and collaborate at a different pace.</p>
         </article>
 
-        <article class="edition-card" id="iquitos">
+        <article class="edition-card" id="iquitos" tabindex="0" role="button" data-modal-kind="comingSoon" data-city="iquitos" aria-label="Iquitos Edition">
           <div class="edition-image">
             <img src="assets/images/hero-iquitos.jpg" alt="Peru Game Jam — Iquitos Edition, coming soon">
           </div>
-          <h3>Iquitos <span>Edition</span></h3>
-          <p>The Amazon. Nature, adventure and new perspectives.</p>
+          <h3><span data-i18n="editions.iquitos.name">Iquitos</span> <span class="edition-word" data-i18n="editions.iquitos.editionWord">Edition</span></h3>
+          <p data-i18n="editions.iquitos.desc">Deep in the Amazon, where rivers replace roads and nature reshapes perspective. An edition designed to spark curiosity, experimentation and unforgettable stories.</p>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- WHY JOIN -->
-  <section class="why-join" id="experience">
+  <!-- WHY JOIN / ABOUT -->
+  <section class="why-join" id="about">
     <div class="container">
-      <p class="eyebrow">Why join</p>
-      <h2>More than a game jam.</h2>
+      <p class="eyebrow" data-i18n="whyJoin.eyebrow">Why join</p>
+      <h2 data-i18n="whyJoin.heading">More than a game jam.</h2>
 
       <div class="feature-grid">
         <div class="feature">
           <svg class="feature-icon" width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="11" cy="10" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="22" cy="12" r="3.2" stroke="currentColor" stroke-width="1.5"/><path d="M4 26c0-4.4 3.6-7.5 8-7.5s8 3.1 8 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M19 19.5c3.6.4 6 3.1 6 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-          <h3>International Community</h3>
-          <p>Meet and collaborate with developers, artists, musicians and storytellers from around the world.</p>
+          <h3 data-i18n="whyJoin.features.0.title">International Community</h3>
+          <p data-i18n="whyJoin.features.0.desc">Meet and collaborate with developers, artists, musicians and storytellers from around the world.</p>
         </div>
         <div class="feature">
           <svg class="feature-icon" width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="9" y="7" width="14" height="18" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M13 7V5.5C13 4.7 13.7 4 14.5 4h3c.8 0 1.5.7 1.5 1.5V7" stroke="currentColor" stroke-width="1.5"/><path d="M12 15h8M12 19h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-          <h3>Travel & Culture</h3>
-          <p>Experience Peru through its people, food, places and traditions in each edition.</p>
+          <h3 data-i18n="whyJoin.features.1.title">Travel & Culture</h3>
+          <p data-i18n="whyJoin.features.1.desc">Experience Peru through its people, food, places and traditions in each edition.</p>
         </div>
         <div class="feature">
           <svg class="feature-icon" width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="4" y="12" width="24" height="12" rx="6" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="18" r="1.6" fill="currentColor"/><circle cx="20" cy="18" r="1.6" fill="currentColor"/></svg>
-          <h3>Create & Share</h3>
-          <p>Build games in unique environments and showcase your projects.</p>
+          <h3 data-i18n="whyJoin.features.2.title">Create & Share</h3>
+          <p data-i18n="whyJoin.features.2.desc">Build games in unique environments and showcase your projects.</p>
         </div>
         <div class="feature">
           <svg class="feature-icon" width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M7 12h16v6a8 8 0 0 1-8 8 8 8 0 0 1-8-8v-6Z" stroke="currentColor" stroke-width="1.5"/><path d="M23 14h2a3 3 0 0 1 0 6h-2" stroke="currentColor" stroke-width="1.5"/><path d="M11 8.5c0-1 .8-1 .8-2s-.8-1-.8-2M16 8.5c0-1 .8-1 .8-2s-.8-1-.8-2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-          <h3>Work & Connect</h3>
-          <p>Inspiring venues, good coffee and the right vibes to create.</p>
+          <h3 data-i18n="whyJoin.features.3.title">Work & Connect</h3>
+          <p data-i18n="whyJoin.features.3.desc">Inspiring venues, good coffee and the right vibes to create.</p>
         </div>
         <div class="feature">
           <svg class="feature-icon" width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M16 27s-11-6.7-11-14.5A5.5 5.5 0 0 1 16 9a5.5 5.5 0 0 1 11 3.5C27 20.3 16 27 16 27Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
-          <h3>Lasting Memories</h3>
-          <p>Friendships, ideas and experiences that will stay with you forever.</p>
+          <h3 data-i18n="whyJoin.features.4.title">Lasting Memories</h3>
+          <p data-i18n="whyJoin.features.4.desc">Friendships, ideas and experiences that will stay with you forever.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- VISION -->
-  <section class="vision" id="about">
+  <!-- VISION / EXPERIENCE -->
+  <section class="vision" id="experience">
     <div class="container vision-grid">
       <div class="vision-text">
-        <p class="eyebrow">Our vision</p>
-        <h2>Building a creative map of Peru, together.</h2>
-        <p>Peru Game Jam is a platform that connects people, communities and cities through the power of games and creativity.</p>
-        <a href="#about" class="btn btn-outline">Learn more about PGJ <span class="arrow">→</span></a>
+        <p class="eyebrow" data-i18n="vision.eyebrow">Our vision</p>
+        <h2 data-i18n="vision.heading">Building a creative map of Peru, together.</h2>
+        <p data-i18n="vision.text">Peru Game Jam is a platform that connects people, communities and cities through the power of games and creativity.</p>
+        <button type="button" class="btn btn-outline js-open-modal" data-modal-kind="vision"><span data-i18n="vision.cta">Learn more</span> <span class="arrow">→</span></button>
       </div>
       <div class="vision-gallery">
         <img src="https://picsum.photos/seed/pgj-gallery-1/500/500" alt="Team discussing ideas around a table">
@@ -166,10 +164,10 @@
   <section class="cta-band" id="waitlist">
     <div class="container cta-inner">
       <div class="cta-text">
-        <h2>Be part of the journey.</h2>
-        <p>Join our waitlist and get early updates, behind the scenes and exclusive content.</p>
+        <h2 data-i18n="ctaBand.heading">Be part of the journey.</h2>
+        <p data-i18n="ctaBand.text">Join our waitlist and get early updates, behind the scenes and exclusive content.</p>
       </div>
-      <button type="button" class="btn btn-dark js-open-waitlist">Join the Waitlist</button>
+      <button type="button" class="btn btn-dark js-open-waitlist" data-i18n="cta.waitlist">Join the Waitlist</button>
     </div>
   </section>
 
@@ -182,30 +180,29 @@
     </div>
 
     <div class="footer-col">
-      <h4>Navigation</h4>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#editions">Editions</a>
-      <a href="#experience">Experience</a>
+      <h4 data-i18n="footer.navTitle">Navigation</h4>
+      <a href="#home" data-i18n="footer.home">Home</a>
+      <a href="#editions" data-i18n="footer.editions">Editions</a>
+      <a href="#about" data-i18n="footer.about">About</a>
+      <a href="#experience" data-i18n="footer.experience">Experience</a>
     </div>
 
     <div class="footer-col">
       <h4>&nbsp;</h4>
-      <a href="#faq">FAQ</a>
-      <a href="#blog">Blog</a>
-      <a href="#contact">Contact</a>
+      <button type="button" class="footer-link-btn js-open-modal" data-modal-kind="howitworks" data-i18n="footer.faq">FAQ</button>
+      <span class="nav-disabled" data-i18n="footer.contact">Contact</span>
     </div>
 
     <div class="footer-col">
-      <h4>Editions 2027</h4>
-      <a href="#lima">Lima Edition</a>
-      <a href="#cusco">Cusco Edition</a>
-      <a href="#arequipa">Arequipa Edition</a>
-      <a href="#iquitos">Iquitos Edition</a>
+      <h4 data-i18n="footer.editionsTitle">Editions 2027</h4>
+      <a href="#lima" data-i18n="nav.limaEdition">Lima Edition</a>
+      <a href="#cusco" data-i18n="nav.cuscoEdition">Cusco Edition</a>
+      <a href="#arequipa" data-i18n="nav.arequipaEdition">Arequipa Edition</a>
+      <a href="#iquitos" data-i18n="nav.iquitosEdition">Iquitos Edition</a>
     </div>
 
     <div class="footer-col footer-social">
-      <h4>Follow Us</h4>
+      <h4 data-i18n="footer.followUs">Follow Us</h4>
       <div class="social-icons">
         <a href="#" aria-label="Instagram">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
@@ -224,13 +221,22 @@
   </div>
 
   <div class="container footer-bottom">
-    <p>© 2026 Peru Game Jam. All rights reserved.</p>
+    <p data-i18n="footer.copyright">© 2026 Peru Game Jam. All rights reserved.</p>
   </div>
 </footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal" role="dialog" aria-modal="true">
+    <button type="button" class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+    <div class="modal-body" id="modal-body"></div>
+  </div>
+</div>
 
 <div id="fillout-waitlist-trigger" class="fillout-trigger-hidden" data-zite-id="2kdswmjrkg" data-zite-embed-type="popup" data-zite-button-text="Join the Waitlist" data-zite-inherit-parameters data-zite-popup-size="medium"></div>
 <script src="https://server.fillout.com/embed/v2-zite/"></script>
 
+<script src="js/translations.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
